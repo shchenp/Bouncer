@@ -11,11 +11,16 @@ public class GameManager : MonoBehaviour
    [SerializeField]
    private Candy _candy;
 
-   [SerializeField] private ColorsProvider _colorsProvider;
+   [SerializeField]
+   private Player _player;
+
+   [SerializeField]
+   private ColorsProvider _colorsProvider;
 
    private void Awake()
    {
-      _giftManager.Initialize(_colorsProvider);
-      _candy.Initialize(_colorsProvider);
+      _player.Initialize();
+      _giftManager.Initialize(_player, _colorsProvider);
+      _candy.Initialize(_player, _colorsProvider);
    }
 }

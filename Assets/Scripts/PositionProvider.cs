@@ -9,7 +9,7 @@ public static class PositionProvider
     [SerializeField] 
     private static int _randomRadius = 10;
     
-    public static void SetPosition(GameObject item)
+    public static void SetRandomPosition(GameObject item)
     {
         var randomPosition = Random.insideUnitCircle * _randomRadius;
         var itemPosition = item.transform.position;
