@@ -15,8 +15,13 @@ public class Lid : MonoBehaviour
         SetColor(color);
     }
 
-    public void SetColor(Color color)
+    private void SetColor(Color color)
     {
         _ribbon.color = color;
+    }
+
+    public Color GetColor()
+    {
+        return _ribbon.color;
     }
 }

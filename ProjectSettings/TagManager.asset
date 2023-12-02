@@ -6,7 +6,6 @@ TagManager:
   tags:
   - GameBoard
   - Gift
-  - NewGift
   layers:
   - Default
   - TransparentFX
