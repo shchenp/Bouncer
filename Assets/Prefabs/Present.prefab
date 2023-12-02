@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 4399297446882208502}
   m_Layer: 0
   m_Name: lid
-  m_TagString: Untagged
+  m_TagString: Gift
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -112,7 +112,7 @@ GameObject:
   - component: {fileID: -6394975856900807465}
   m_Layer: 0
   m_Name: Present
-  m_TagString: Untagged
+  m_TagString: Gift
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -4,12 +4,12 @@ using UnityEngine;
 using Random = UnityEngine.Random;
 
 [Serializable]
-public class PositionProvider
+public static class PositionProvider
 {
     [SerializeField] 
-    private int _randomRadius = 10;
+    private static int _randomRadius = 10;
     
-    public void SetPosition<T>(T item) where T : MonoBehaviour
+    public static void SetPosition(GameObject item)
     {
         var randomPosition = Random.insideUnitCircle * _randomRadius;
         var itemPosition = item.transform.position;

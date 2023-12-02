@@ -1,14 +1,16 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using Game;
 using UnityEngine;
 
 public class Gift : MonoBehaviour
 {
     private Lid _lid;
     
-    public void Initialize(PositionProvider positionProvider, Color color)
+    public void Initialize(Color color)
     {
-        positionProvider.SetPosition(this);
+        PositionProvider.SetPosition(gameObject);
 
         _lid = GetComponentInChildren<Lid>();
         _lid.Initialize(color);

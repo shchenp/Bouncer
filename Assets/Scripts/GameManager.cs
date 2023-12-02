@@ -9,10 +9,9 @@ public class GameManager : MonoBehaviour
    private GiftManager _giftManager;
 
    [SerializeField] private ColorsProvider _colorsProvider;
-   [SerializeField] private PositionProvider _positionProvider;
 
    private void Awake()
    {
-      _giftManager.Initialize(_positionProvider, _colorsProvider);
+      _giftManager.Initialize(_colorsProvider);
    }
 }
