@@ -12,7 +12,7 @@ public class Player : MonoBehaviour
    [SerializeField]
    private Renderer _renderer;
    [SerializeField]
-   private float _speed = 40;
+   private float _speed = 300;
    [SerializeField]
    private Transform _centerOfMass;
    
@@ -33,8 +33,7 @@ public class Player : MonoBehaviour
       {
          if (Input.GetMouseButtonDown(0))
          {
-            var point = hitInfo.point;
-            _rigidbody.AddForce(point * _speed);
+            SetDirection(hitInfo);
          }
       }
    }
@@ -54,5 +53,13 @@ public class Player : MonoBehaviour
    public Color GetColor()
    {
       return _renderer.material.color;
+   }
+
+   private void SetDirection(RaycastHit hitInfo)
+   {
+      _rigidbody.velocity = Vector3.zero;
+      var point = hitInfo.point;
+      var direction = (point - transform.position).normalized;
+      _rigidbody.AddForce(direction * _speed);
    }
 }
