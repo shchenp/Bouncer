@@ -6,6 +6,7 @@ using UnityEngine;
 
 public class Gift : MonoBehaviour
 {
+    [SerializeField]
     private Lid _lid;
     private Player _player;
     
@@ -15,7 +16,6 @@ public class Gift : MonoBehaviour
 
         _player = player;
         
-        _lid = GetComponentInChildren<Lid>();
         _lid.Initialize(color);
     }
 
