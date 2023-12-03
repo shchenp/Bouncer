@@ -27,9 +27,9 @@ public class Candy : MonoBehaviour
         _candyMaterial.color = color;
     }
 
-    private void OnCollisionEnter(Collision other)
+    private void OnTriggerEnter(Collider other)
     {
-        if (other.collider.CompareTag(GlobalConstants.PLAYER_TAG))
+        if (other.CompareTag(GlobalConstants.PLAYER_TAG))
         {
             _player.SetColor(_candyMaterial.color);
             
