@@ -3,10 +3,8 @@ using System;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
-[Serializable]
 public static class PositionProvider
 {
-    [SerializeField] 
     private static int _randomRadius = 10;
     
     public static void SetRandomPosition(GameObject item)
