@@ -16,4 +16,9 @@ public class ColorsProvider
 
         return _colors[index];
     }
+
+    public Color[] GetAllColors()
+    {
+        return _colors;
+    }
 }

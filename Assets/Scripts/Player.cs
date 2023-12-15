@@ -2,9 +2,12 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Player : MonoBehaviour
 {
+   [SerializeField]
+   private UnityEvent<int> _playerMoved;
    [SerializeField]
    private LayerMask _gameboardLayer;
    [SerializeField]
@@ -17,6 +20,7 @@ public class Player : MonoBehaviour
    private Transform _centerOfMass;
    
    private Camera _camera;
+   private int _movementCount;
 
    public void Initialize()
    {
@@ -38,13 +42,6 @@ public class Player : MonoBehaviour
       }
    }
 
-   private void OnDrawGizmos()
-   {
-      Gizmos.color = Color.blue;
-      Gizmos.DrawSphere(_rigidbody.worldCenterOfMass, 0.1f);
-
-   }
-
    public void SetColor(Color color)
    {
       _renderer.material.color = color;
@@ -61,5 +58,7 @@ public class Player : MonoBehaviour
       var point = hitInfo.point;
       var direction = (point - transform.position).normalized;
       _rigidbody.AddForce(direction * _speed);
+      
+      _playerMoved.Invoke(++_movementCount);
    }
 }

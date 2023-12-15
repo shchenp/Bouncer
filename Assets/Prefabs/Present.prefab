@@ -198,6 +198,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _lid: {fileID: 4399297446882208502}
+  _onGiftDestroyed:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!65 &8144850994192456871
 BoxCollider:
   m_ObjectHideFlags: 0
