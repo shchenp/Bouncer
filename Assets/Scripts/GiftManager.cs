@@ -34,11 +34,6 @@ public class GiftManager : MonoBehaviour
       _onGiftInitialize.Invoke(_giftDictionary);
    }
 
-   public void UpdateCount(Color color)
-   {
-      _giftDictionary[color]--;
-   }
-
    private void InitializeDictionary(Color[] colors)
    {
       _giftDictionary = new Dictionary<Color, int>();
